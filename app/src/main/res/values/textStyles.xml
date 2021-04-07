@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="regularText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+    </style>
+
+    <style name="boldCaption" parent="regularText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="descriptionText" parent="regularText">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/material_on_background_emphasis_medium</item>
+    </style>
+</resources>

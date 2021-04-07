@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="model" type="ru.alexmaryin.recycleronvisitor.data.ui_models.TwoStringsItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/listPreferredItemHeight"
+        android:mode="twoLine"
+        android:paddingStart="?attr/listPreferredItemPaddingStart"
+        android:paddingEnd="?attr/listPreferredItemPaddingEnd">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{model.caption}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?attr/textAppearanceListItem" />
+
+        <TextView
+            android:id="@id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{model.details}"
+            app:layout_constraintTop_toBottomOf="@id/text1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="?attr/textAppearanceListItemSecondary" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

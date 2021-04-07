@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="headerItem"
+            type="ru.alexmaryin.recycleronvisitor.data.ui_models.RecyclerHeader" />
+    </data>
+
+    <TextView
+        style="@style/regularText"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#591976D2"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:text="@{headerItem.text}"/>
+</layout>

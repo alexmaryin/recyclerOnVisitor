@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="model" type="ru.alexmaryin.recycleronvisitor.data.ui_models.OneLineItem2" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="@{model.left}"
+            android:textAlignment="textEnd"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/cardview_dark_background"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry,TextContrastCheck"
+            tools:text="Left text" />
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:scaleX="0.5"
+            android:scaleY="0.9"
+            android:src="@drawable/ic_outline_waves_24"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/text1"
+            app:layout_constraintEnd_toStartOf="@+id/text2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/text1"
+            app:layout_constraintTop_toTopOf="@+id/text1"
+            app:srcCompat="@drawable/ic_outline_waves_24"
+            tools:ignore="ContentDescription"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@id/text2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            android:text="@{model.right}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintBottom_toBottomOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toTopOf="@+id/divider"
+            tools:ignore="RtlSymmetry"
+            tools:text="Right text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
